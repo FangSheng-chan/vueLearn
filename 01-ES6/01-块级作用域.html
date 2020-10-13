@@ -1,0 +1,30 @@
+<!-- ES5之前因为 if 和 for 都没有块级作用域，只要function有作用域 -->
+<!-- 优先使用 const  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+
+    <script>
+        const btns = document.getElementsByTagName('button')
+        for (let index = 0; index < btns.length; index++) {
+            btns[index].addEventListener('click', function() {
+                console.log('第' + index + '个按键被点击');
+            })
+        }
+    </script>
+</body>
+
+</html>
